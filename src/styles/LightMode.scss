@@ -1,0 +1,289 @@
+$light-grey: #efefef;
+$dark-color: #000;
+$light-bg: #fff;
+$btn-bg: #dadada;
+
+body.body-light {
+    background-color: $light-bg;
+    color: $dark-color;
+
+    a {
+        color: $dark-color;
+    }
+
+    button.supabase-auth-ui_ui-button {
+        background-color: #efefef !important;
+        color: #000 !important;
+        border: unset !important;
+    }
+
+    .loading-box {
+        background: linear-gradient(90deg, #efefef 25%, #dadada 50%, #efefef 75%);
+        background-size: 200% 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        animation: loadingSkeleton 1.5s infinite;
+    }
+
+    button {
+        background-color: $btn-bg;
+        color: $dark-color;
+    }
+
+    .tooltip-content {
+        background-color: $light-grey !important;
+        color: $dark-color !important;
+    }
+
+    .label-popup-container .label-component,
+    .rename-container .dv-rename {
+        background-color: $light-grey;
+
+        input {
+            background-color: $btn-bg;
+
+            color: #000;
+        }
+    }
+
+    .snackbar-container {
+        background-color: $light-grey;
+        box-shadow: -1px -1px 6px 1px $btn-bg;
+    }
+
+    // audio player style
+    .audio-player-component {
+
+        .rhap_container {
+            background-color: rgb(239 239 239);
+
+            .rhap_time,
+            .rhap_button-clear {
+                color: $dark-color;
+            }
+        }
+    }
+}
+
+nav.light-nav {
+    transition: all 0.1s ease-in-out;
+    background-color: $light-bg;
+    box-shadow: inset 0px -1px 1px $light-grey;
+
+    header {
+        .dropdown-container .dropdown {
+            position: absolute;
+            background-color: $light-grey;
+            box-shadow: 1px 1px 6px $btn-bg;
+
+            button {
+                background-color: transparent;
+                transition: all 0.5s ease-in-out;
+
+                &:hover {
+                    background-color: $btn-bg;
+                }
+            }
+        }
+
+        .hamburger-menu-content {
+            background-color: $light-grey;
+            color: $dark-color;
+        }
+    }
+
+    .side-menu {
+        background-color: $light-grey;
+
+        a {
+            color: #000;
+
+            li {
+                &:hover {
+                    background: #d1d1d1;
+                }
+            }
+
+            &.active-link {
+                background: #d1d1d1;
+
+                &::before {
+                    background-color: #1147a9;
+                }
+
+                li {
+                    background: #d1d1d1;
+                }
+
+                svg {
+                    color: #1147a9;
+                }
+            }
+        }
+
+    }
+
+}
+
+.container.light-container {
+
+    .about-container {
+        .about-flex-content .about-content-right img {
+            border-color: $light-grey;
+        }
+
+        p,
+        li {
+            color: $dark-color;
+        }
+
+        .about-tech-container div {
+            background-color: $light-grey;
+
+            // &:nth-child(2):hover,
+            // &:nth-child(4):hover {
+            //     color: #000000;
+            // }
+        }
+
+        .about-sm-title {
+            background-color: $btn-bg;
+        }
+    }
+
+    .user-profile-container .download-excel-btn button {
+        background-color: $light-grey;
+    }
+
+    .label-component .label-box-container {
+        background-color: $light-grey;
+
+        a {
+            color: #000;
+        }
+    }
+
+    .label-navigate {
+        background-color: $light-grey;
+    }
+
+    .label-content-container {
+        .label-audio-content {
+            .label-audio-text {
+                background-color: $btn-bg;
+            }
+
+            .label-audio-icon {
+                background-color: $light-grey;
+            }
+        }
+
+        .label-doc-content {
+            .label-doc-icon {
+                background-color: $light-grey;
+            }
+
+            .label-doc-text {
+                background-color: $btn-bg;
+            }
+        }
+    }
+
+    .user-profile-container {
+        .profile-details {
+            .right-profile-details .user-profile-details {
+                background-color: $light-grey;
+            }
+
+            .left-profile-details .profile-photo .user-icon {
+                background-color: $light-grey;
+            }
+        }
+
+        .table-container {
+            .download-excel-btn button {
+                background-color: $light-grey;
+
+            }
+
+            table {
+
+                th,
+                .total-size-td {
+                    background-color: $light-grey;
+                }
+
+                tr:hover {
+                    background-color: $light-grey;
+                }
+            }
+        }
+    }
+
+    .video-content-container .all-videos-container .media-items .stream-on {
+        background-color: $light-bg;
+    }
+
+    .light-tooltip {
+        background-color: $light-grey;
+        color: $dark-color;
+    }
+
+    a.folder-content,
+    .upload-box {
+        color: $dark-color;
+        background-color: $light-grey;
+
+        .drag-and-drop-uploader {
+            background-color: $light-bg;
+        }
+    }
+
+    .component {
+        background-color: $light-grey;
+
+        button {
+            background-color: $light-bg;
+            color: #000;
+        }
+
+        .content-box {
+            background-color: $light-bg;
+
+            .media-items {
+                background-color: $light-grey;
+            }
+        }
+    }
+}
+
+.about-file-container-light .about-file-content {
+    background-color: $light-bg;
+
+    .available-label-container p {
+        background-color: $light-grey;
+    }
+
+    button {
+        background-color: $light-grey;
+        color: $dark-color;
+    }
+}
+
+@media (max-width: 800px) {
+    nav.light-nav .side-menu {
+        background-color: unset;
+
+        ul {
+            background-color: $light-grey;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    nav.light-nav {
+        .side-menu {
+            box-shadow: 4px 4px 7px 0px $btn-bg;
+        }
+    }
+}

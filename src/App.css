@@ -1,0 +1,60 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+
+
+.authContainer {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+.loggedInSection {
+  text-align: center;
+  padding: 20px;
+}
+
+.welcomeText {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.signOutButton {
+  background: #ff5555;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+body {
+  background: #1d1d1d;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #292929;
+}
+
+/* 
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
