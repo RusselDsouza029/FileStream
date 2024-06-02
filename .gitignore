@@ -2,3 +2,6 @@
 /.parcel-cache
 /dist
 .env.local
+/manifest.json
+/sitemap.xml
+/robots.txt

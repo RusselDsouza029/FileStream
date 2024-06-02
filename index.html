@@ -3,10 +3,173 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FileStream</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="author" content="Russel Dsouza" />
+    <meta name="creator" content="Russel Dsouza" />
+    <meta
+      name="description"
+      content="FileStream: A web application showcasing skills in front-end development, user interface design, and web application functionality."
+    />
+    <meta
+      name="keywords"
+      content="front-end development, user interface design, web application, file management, Russel Dsouza"
+    />
+    <link rel="apple-touch-icon" href="logo.png" />
+    <link rel="apple-touch-icon" href="logo.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <title>FileStream: A Robust File Management Application</title>
   </head>
   <body>
-    <div id="root"></div>
+    <style>
+      .loader {
+        display: block;
+        --loader-color: #0071e2;
+        width: 130px;
+        height: 5px;
+        border-radius: 30px;
+        background-color: #5c5c5c33;
+        position: relative;
+      }
+
+      .loader::before {
+        content: "";
+        position: absolute;
+        background: var(--loader-color);
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        border-radius: 30px;
+        animation: moving 1s ease-in-out infinite;
+      }
+
+      @keyframes moving {
+        50% {
+          width: 100%;
+        }
+
+        100% {
+          width: 0;
+          right: 0;
+          left: unset;
+        }
+      }
+
+      .loader-container {
+        position: absolute;
+        top: 0;
+        z-index: 9999;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1d1d1d;
+      }
+
+      svg.logo {
+        /* filter: grayscale(100%); */
+        width: 150px;
+      }
+    </style>
+    <div id="root">
+      <div class="loader-container" id="loader-container">
+        <div>
+          <svg
+            class="logo"
+            id="outputsvg"
+            xmlns="http://www.w3.org/2000/svg"
+            style="
+              transform: matrix(1, 0, 0, 1, 0, -0.800018);
+              transform-origin: 50% 50%;
+              max-height: 250.6px;
+              transition: none 0s ease 0s;
+            "
+            width="551"
+            height="452"
+            viewBox="0 0 5510 4520"
+          >
+            <g
+              id="l4YEXbYhWibXMmy8vMmiT7z"
+              fill="rgb(109,157,239)"
+              style="transform: none;"
+            >
+              <g style="transform: none;">
+                <path
+                  id="p7KkP45xs"
+                  d="M3945 1795 c-143 -63 -289 -127 -325 -143 -36 -16 -90 -39 -120 -52 -30 -12 -77 -33 -105 -45 -27 -13 -203 -88 -390 -168 -187 -80 -367 -158 -400 -172 l-61 -27 -605 316 c-441 230 -615 316 -639 316 -33 0 -33 0 -15 -20 16 -18 16 -20 2 -15 -9 4 -67 -16 -139 -48 -68 -29 -200 -87 -295 -128 -142 -61 -169 -75 -155 -85 21 -14 669 -352 2029 -1060 l372 -194 198 86 c109 48 358 155 553 239 195 84 524 226 730 315 206 89 481 207 610 262 129 55 236 101 237 102 1 1 -49 27 -110 59 -62 32 -148 77 -193 100 -44 24 -174 92 -290 152 -115 59 -285 148 -378 197 -94 49 -178 90 -188 91 -16 1 -16 3 -1 19 15 17 14 18 -23 17 -26 0 -123 -37 -299 -114z"
+                ></path>
+              </g>
+            </g>
+            <g
+              id="l4Gz5IqORd3rzb9TQbWDvII"
+              fill="rgb(17,71,167)"
+              style="transform: none;"
+            >
+              <g style="transform: none;">
+                <path
+                  id="pbN5284VJ"
+                  d="M2182 3304 c-145 -63 -270 -114 -277 -114 -7 0 -18 7 -25 15 -7 9 -16 12 -19 7 -3 -5 -130 -62 -281 -126 -151 -64 -306 -131 -345 -148 -148 -65 -884 -382 -970 -418 -131 -53 -157 -69 -153 -88 2 -11 106 -70 283 -162 154 -80 357 -185 450 -234 352 -183 401 -209 436 -233 36 -24 37 -24 80 -7 24 9 80 33 124 54 44 20 96 42 115 49 19 7 49 20 65 28 17 8 324 141 684 297 l653 282 77 -39 c125 -65 732 -382 944 -494 l197 -104 68 32 c37 17 182 81 322 141 140 60 256 110 257 112 1 1 -14 11 -35 21 -20 11 -89 47 -152 81 -63 33 -209 109 -325 169 -115 59 -223 116 -240 125 -16 10 -91 49 -165 88 -74 38 -306 159 -515 268 -504 262 -990 514 -990 513 0 0 -119 -52 -263 -115z"
+                ></path>
+              </g>
+            </g>
+            <g
+              id="l4rgBMV1r6jDOUfebNz63xe"
+              fill="rgb(39,111,235)"
+              style="transform: none;"
+            >
+              <g style="transform: none;">
+                <path
+                  id="p10pNSDom0"
+                  d="M2982 2540 c-107 -44 -1350 -584 -1360 -592 -6 -6 -12 -8 -12 -5 0 5 -190 -75 -215 -91 -5 -4 -14 -7 -20 -8 -5 -1 -30 -11 -54 -21 l-44 -19 627 -327 c344 -180 633 -327 640 -327 8 0 45 14 83 31 37 17 221 96 408 175 187 80 351 151 365 159 14 7 30 14 35 16 6 1 39 15 73 31 35 15 66 28 70 28 3 0 37 15 76 33 39 18 191 85 338 148 147 63 268 116 268 119 0 5 -81 48 -760 403 -402 210 -493 257 -494 256 -1 0 -11 -4 -24 -9z"
+                ></path>
+              </g>
+            </g>
+            <g
+              id="l7ZH471nZzRuE49rLcpruHc"
+              fill="rgb(13,59,139)"
+              style="transform: none;"
+            >
+              <g style="transform: none;">
+                <path
+                  id="pcjQ4HpEw"
+                  d="M110 3433 c0 -555 3 -1012 6 -1016 4 -3 25 3 48 15 22 12 81 38 131 58 102 42 758 325 940 405 66 29 240 104 388 166 147 63 267 119 267 126 0 6 -47 44 -105 85 -59 40 -138 96 -178 124 -40 28 -166 116 -282 196 -115 80 -381 264 -590 410 -209 145 -425 295 -480 333 -55 37 -110 77 -122 88 l-23 20 0 -1010z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+
+          <div class="loader"></div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="index.js"></script>
+    <script>
+      const themeDetect = window.matchMedia("(prefers-color-scheme: light)");
+
+      const localstorageTheme = localStorage.getItem("themeVal");
+
+      let loaderBg = document.getElementById("loader-container").style;
+
+      function themeChecker() {
+        if (localstorageTheme !== null) {
+          if (localstorageTheme === "dark") {
+            loaderBg.backgroundColor = "#1d1d1d";
+          } else {
+            loaderBg.backgroundColor = "#fff";
+          }
+        } else {
+          if (themeDetect.matches) {
+            loaderBg.backgroundColor = "#fff";
+          } else {
+            loaderBg.backgroundColor = "#1d1d1d";
+          }
+        }
+      }
+
+      themeChecker();
+    </script>
   </body>
 </html>
