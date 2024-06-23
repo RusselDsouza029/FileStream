@@ -99,129 +99,132 @@ const About = () => {
     setActiveTab(id);
   };
   return (
-    <div className="about-container">
-      <div className="about-flex-content">
-        <div className="about-content-left">
-          <p className="about-sm-title">
-            <BsInfoSquare /> About
-          </p>
-          <h1>FileStream: A Robust File Management Application</h1>
-          <p>
-            FileStream is a powerful application designed to streamline file
-            management and storage for our users. It leverages the secure and
-            scalable infrastructure of Supabase to ensure your files are always
-            accessible and protected.
-          </p>
+    <>
+      <div className="about-container">
+        <div className="about-flex-content">
+          <div className="about-content-left">
+            <p className="about-sm-title">
+              <BsInfoSquare /> About
+            </p>
+            <h1>FileStream: A Robust File Management Application</h1>
+            <p>
+              FileStream is a powerful application designed to streamline file
+              management and storage for our users. It leverages the secure and
+              scalable infrastructure of Supabase to ensure your files are
+              always accessible and protected.
+            </p>
+          </div>
+          <div className="about-content-right">
+            <img
+              src={isToggleOn ? LightHp : DarkHp}
+              alt="home-page"
+              width="100%"
+            />
+          </div>
         </div>
-        <div className="about-content-right">
-          <img
-            src={isToggleOn ? LightHp : DarkHp}
-            alt="home-page"
-            width="100%"
-          />
-        </div>
-      </div>
-      <p className="about-sm-title">
-        <GrSettingsOption /> Key Features
-      </p>
-      <ul>
-        <li>
-          <b>Effortless Uploads and Storage</b>: Drag-and-drop or browse to
-          upload various file types, including images, videos, audio files, and
-          documents.
-        </li>
-        <li>
-          <b>Organized Categorization</b>: Categorize your files using four
-          pre-defined categories (Images, Videos, Audios, Documents) for easy
-          organization and retrieval.
-        </li>
-        <li>
-          <b>Customizable Labels</b>: Enhance organization further by adding
-          custom labels to your files. This allows you to create a personalized
-          filing system tailored to your specific needs.
-        </li>
-        <li>
-          <b>Visualized Storage Usage</b>: Gain a clear understanding of your
-          allocated storage space with a visual representation of your current
-          file usage within your account page.
-        </li>
-        <li>
-          <b>Profile Management</b>: Update your profile picture directly within
-          the FileStream application, ensuring your account profile reflects
-          your current identity.
-        </li>
-      </ul>
-      <p>
-        Leveraged Context API for efficient state management across application
-        components. Implemented seamless authentication using Google and Github
-        through Supabase, a robust backend-as-a-service solution. Firebase
-        provided a scalable and reliable platform for hosting the application,
-        ensuring optimal performance and availability.
-      </p>
-
-      <div
-        style={{
-          paddingTop: "20px",
-        }}
-      >
         <p className="about-sm-title">
-          <GiProcessor /> Technology
+          <GrSettingsOption /> Key Features
         </p>
-        <div className="about-tech-container">
-          {techTabObj.map((item, ind) => {
-            return (
-              <div
-                key={item.id}
-                className={`${activeTab === item.id && "active"}`}
-                onClick={() => handleClick(item.id)}
-              >
-                {item.icon}
-                <span>{item.title}</span>
-              </div>
-            );
-          })}
-        </div>
-        {techTabObj.map((item, ind) => (
-          <div key={item.id}>{activeTab === item.id && item.content}</div>
-        ))}
-      </div>
-
-      <div
-        style={{
-          paddingTop: "20px",
-        }}
-      >
-        <p className="about-sm-title">
-          <CiUser /> About Me
-        </p>
-
+        <ul>
+          <li>
+            <b>Effortless Uploads and Storage</b>: Drag-and-drop or browse to
+            upload various file types, including images, videos, audio files,
+            and documents.
+          </li>
+          <li>
+            <b>Organized Categorization</b>: Categorize your files using four
+            pre-defined categories (Images, Videos, Audios, Documents) for easy
+            organization and retrieval.
+          </li>
+          <li>
+            <b>Customizable Labels</b>: Enhance organization further by adding
+            custom labels to your files. This allows you to create a
+            personalized filing system tailored to your specific needs.
+          </li>
+          <li>
+            <b>Visualized Storage Usage</b>: Gain a clear understanding of your
+            allocated storage space with a visual representation of your current
+            file usage within your account page.
+          </li>
+          <li>
+            <b>Profile Management</b>: Update your profile picture directly
+            within the FileStream application, ensuring your account profile
+            reflects your current identity.
+          </li>
+        </ul>
         <p>
-          Hi there, I'm Russell Dsouza! My passion lies in building web
-          applications that are both user-friendly and visually appealing.
-          During college, I took the initiative to explore web development on my
-          own, igniting a fire that led me to further hone my skills through a
-          Front-End Development certification course at TryCatch Classes. Now,
-          as a web developer at Futuready Media, I'm actively involved in
-          crafting engaging and innovative websites, constantly striving to push
-          the boundaries of web design. My experience aligns well with the
-          technologies used in FileStream, and you can see more of my work
-          focused on web development in my portfolio:{" "}
-          <b>
-            <a
-              href="https://russeldsouza.dev/"
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                color: "inherit",
-              }}
-            >
-              Russel Dsouza
-            </a>
-          </b>
-          .
+          Leveraged Context API for efficient state management across
+          application components. Implemented seamless authentication using
+          Google and Github through Supabase, a robust backend-as-a-service
+          solution. Firebase provided a scalable and reliable platform for
+          hosting the application, ensuring optimal performance and
+          availability.
         </p>
+
+        <div
+          style={{
+            paddingTop: "20px",
+          }}
+        >
+          <p className="about-sm-title">
+            <GiProcessor /> Technology
+          </p>
+          <div className="about-tech-container">
+            {techTabObj.map((item, ind) => {
+              return (
+                <div
+                  key={item.id}
+                  className={`${activeTab === item.id && "active"}`}
+                  onClick={() => handleClick(item.id)}
+                >
+                  {item.icon}
+                  <span>{item.title}</span>
+                </div>
+              );
+            })}
+          </div>
+          {techTabObj.map((item, ind) => (
+            <div key={item.id}>{activeTab === item.id && item.content}</div>
+          ))}
+        </div>
+
+        <div
+          style={{
+            paddingTop: "20px",
+          }}
+        >
+          <p className="about-sm-title">
+            <CiUser /> About Me
+          </p>
+
+          <p>
+            Hi there, I'm Russell Dsouza! My passion lies in building web
+            applications that are both user-friendly and visually appealing.
+            During college, I took the initiative to explore web development on
+            my own, igniting a fire that led me to further hone my skills
+            through a Front-End Development certification course at TryCatch
+            Classes. Now, as a web developer at Futuready Media, I'm actively
+            involved in crafting engaging and innovative websites, constantly
+            striving to push the boundaries of web design. My experience aligns
+            well with the technologies used in FileStream, and you can see more
+            of my work focused on web development in my portfolio:{" "}
+            <b>
+              <a
+                href="https://russeldsouza.dev/"
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  color: "inherit",
+                }}
+              >
+                Russel Dsouza
+              </a>
+            </b>
+            .
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
