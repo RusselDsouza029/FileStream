@@ -22,4 +22,4 @@ This React.js application showcases my skills in front-end development, user int
 - Integration with Supabase for efficient data management
 - Secure deployment with Firebase
 
-Feel free to explore the [FileStream](https://filestream-9a87f.web.app/) Application
+Feel free to explore the [FileStream](https://filestream.russeldsouza.dev/) Application
