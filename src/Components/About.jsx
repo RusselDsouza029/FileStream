@@ -198,7 +198,7 @@ const About = () => {
           </p>
 
           <p>
-            Hi there, I'm Russell Dsouza! My passion lies in building web
+            Hi there, I'm Russel Dsouza! My passion lies in building web
             applications that are both user-friendly and visually appealing.
             During college, I took the initiative to explore web development on
             my own, igniting a fire that led me to further hone my skills
