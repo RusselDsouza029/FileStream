@@ -1,6 +1,6 @@
 # FileStream: A Feature-Rich File Management Application
 
-This React.js application showcases my skills in front-end development, user interface design, and database integration (See commit: <hash>). FileStream leverages Supabase for a robust backend and Firebase for secure hosting, providing a seamless user experience.
+This React.js application showcases my skills in front-end development, user interface design, and database integration. FileStream leverages Supabase for a robust backend and Firebase for secure hosting, providing a seamless user experience.
 
 ## Key Features:
 - Streamlined Authentication: Effortlessly sign in using Google or Github credentials, simplifying the user journey
